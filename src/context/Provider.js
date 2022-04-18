@@ -7,14 +7,7 @@ const aux = -1;
 
 function Provider({ children }) {
   const [state, setState] = useState({
-    planets: [],
     data: [],
-    name: '',
-    filterByNumericValue: [],
-    order: {
-      column: '',
-      sort: '',
-    },
   });
 
   useEffect(() => {
@@ -28,7 +21,7 @@ function Provider({ children }) {
       });
       setState((prevSt) => ({ ...prevSt, data, planets: data }));
     });
-  });
+  }, []);
 
   const contextVelue = {
     data: state.data,

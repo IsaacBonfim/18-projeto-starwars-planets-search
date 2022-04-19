@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import Context from '../context/Context';
 
-const Table = () => {
+function Table() {
   const { data } = useContext(Context);
   return (
     <table>
@@ -43,6 +43,6 @@ const Table = () => {
       </tbody>
     </table>
   );
-};
+}
 
 export default Table;

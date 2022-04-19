@@ -8,6 +8,7 @@ const aux = -1;
 function Provider({ children }) {
   const [state, setState] = useState({
     data: [],
+    name: '',
   });
 
   useEffect(() => {
@@ -19,12 +20,25 @@ function Provider({ children }) {
 
         return 0;
       });
-      setState((prevSt) => ({ ...prevSt, data, planets: data }));
+      setState((prevState) => ({ ...prevState, data, planets: data }));
     });
   }, []);
 
+  function changeName({ target: { value } }) {
+    setState((prevState) => ({
+      ...prevState,
+      name: value,
+      data: state.planets
+        .filter((planet) => planet.name.toLowerCase().includes(value.toLowerCase())),
+    }));
+  }
+
   const contextVelue = {
     data: state.data,
+    filterByName: {
+      name: state.name,
+    },
+    changeName,
   };
 
   return (

@@ -39,7 +39,7 @@ function Provider({ children }) {
     }));
   }
 
-  function numberFilter(filters = null) {
+  const numberFilter = (filters = null) => {
     const { planets, filterByNumericValues } = state;
     let data = planets;
 
@@ -79,7 +79,11 @@ function Provider({ children }) {
       ...prevState,
       data,
     }));
-  }
+  };
+
+  useEffect(() => {
+    numberFilter();
+  }, [state.filterByNumericValues]);
 
   function performeNumberFilter({ column, comparison, value }) {
     setState((prevState) => ({

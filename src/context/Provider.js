@@ -7,8 +7,10 @@ const aux = -1;
 
 function Provider({ children }) {
   const [state, setState] = useState({
+    planets: [],
     data: [],
     name: '',
+    filterByNumericValues: [],
   });
 
   useEffect(() => {
@@ -20,7 +22,11 @@ function Provider({ children }) {
 
         return 0;
       });
-      setState((prevState) => ({ ...prevState, data, planets: data }));
+      setState((prevState) => ({
+        ...prevState,
+        data,
+        planets: data,
+      }));
     });
   }, []);
 
@@ -33,12 +39,78 @@ function Provider({ children }) {
     }));
   }
 
+  function numberFilter(filters = null) {
+    const { planets, filterByNumericValues } = state;
+    let data = planets;
+
+    filterByNumericValues.forEach(({ column, comparison, value }) => {
+      switch (comparison) {
+      case 'maior que':
+        data = data.filter((item) => parseFloat(item[column]) > value);
+        break;
+      case 'menor que':
+        data = data.filter((item) => parseFloat(item[column]) < value);
+        break;
+      case 'igual a':
+        data = data.filter((item) => item[column] === value);
+        break;
+      default: data = planets;
+      }
+    });
+
+    if (filters) {
+      const { column, comparison, value } = filters;
+
+      switch (comparison) {
+      case 'maior que':
+        data = data.filter((item) => parseFloat(item[column]) > value);
+        break;
+      case 'menor que':
+        data = data.filter((item) => parseFloat(item[column]) < value);
+        break;
+      case 'igual a':
+        data = data.filter((item) => item[column] === value);
+        break;
+      default: data = planets;
+      }
+    }
+
+    setState((prevState) => ({
+      ...prevState,
+      data,
+    }));
+  }
+
+  function performeNumberFilter({ column, comparison, value }) {
+    setState((prevState) => ({
+      ...prevState,
+      filterByNumericValues: [
+        {
+          id: Math.random(),
+          column,
+          comparison,
+          value,
+        },
+      ],
+    }));
+
+    const filter = {
+      column,
+      comparison,
+      value,
+    };
+
+    numberFilter(filter);
+  }
+
   const contextVelue = {
     data: state.data,
     filterByName: {
       name: state.name,
     },
+    filterByNumericValues: state.filterByNumericValues,
     changeName,
+    performeNumberFilter,
   };
 
   return (

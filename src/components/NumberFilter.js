@@ -71,14 +71,16 @@ function NumberFilter() {
         </select>
       </label>
 
-      <input
-        type="number"
-        name="value"
-        placeholder="O Valor"
-        data-testid="value-filter"
-        value={ state.value }
-        onChange={ onChange }
-      />
+      <label htmlFor="value">
+        O valor
+        <input
+          type="number"
+          name="value"
+          data-testid="value-filter"
+          value={ state.value }
+          onChange={ onChange }
+        />
+      </label>
 
       <button
         type="button"

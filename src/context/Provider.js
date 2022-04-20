@@ -85,6 +85,7 @@ function Provider({ children }) {
     setState((prevState) => ({
       ...prevState,
       filterByNumericValues: [
+        ...prevState.filterByNumericValues,
         {
           id: Math.random(),
           column,
@@ -103,6 +104,25 @@ function Provider({ children }) {
     numberFilter(filter);
   }
 
+  function deleteFilter(id = null) {
+    const { filterByNumericValues, planets } = state;
+
+    if (!id) {
+      setState((prevState) => ({
+        ...prevState,
+        filterByNumericValues: [],
+        data: planets,
+      }));
+    } else {
+      const filters = filterByNumericValues.filter((filter) => filter.id !== id);
+
+      setState((prevState) => ({
+        ...prevState,
+        filterByNumericValues: filters,
+      }));
+    }
+  }
+
   const contextVelue = {
     data: state.data,
     filterByName: {
@@ -111,6 +131,7 @@ function Provider({ children }) {
     filterByNumericValues: state.filterByNumericValues,
     changeName,
     performeNumberFilter,
+    deleteFilter,
   };
 
   return (

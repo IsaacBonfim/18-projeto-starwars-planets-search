@@ -8,7 +8,11 @@ function NumberFilter() {
     value: 0,
   });
 
-  const { performeNumberFilter } = useContext(Context);
+  const { performeNumberFilter, filterByNumericValues } = useContext(Context);
+
+  function Columns(column) {
+    return filterByNumericValues.some((position) => position.column === column);
+  }
 
   function onChange({ target }) {
     const { name, value } = target;
@@ -19,20 +23,22 @@ function NumberFilter() {
     }));
   }
 
+  const columnOptions = ['population', 'orbital_period', 'diameter',
+    'rotation_period', 'surface_water'];
+
+  const availableColumns = columnOptions.filter((option) => !Columns(option));
+
   function onClick() {
     const { column, comparison, value } = state;
 
     performeNumberFilter({ column, comparison, value });
 
     setState({
-      column: 'population',
+      column: availableColumns[0],
       comparison: 'maior que',
       value: 0,
     });
   }
-
-  const options = ['population', 'orbital_period', 'diameter',
-    'rotation_period', 'surface_water'];
 
   return (
     <section>
@@ -45,7 +51,7 @@ function NumberFilter() {
           value={ state.column }
           onChange={ onChange }
         >
-          { options.map((option) => (
+          { availableColumns.map((option) => (
             <option
               key={ Math.random() }
               value={ option }
@@ -72,7 +78,7 @@ function NumberFilter() {
       </label>
 
       <label htmlFor="value">
-        O valor
+        o valor
         <input
           type="number"
           name="value"
@@ -86,6 +92,7 @@ function NumberFilter() {
         type="button"
         data-testid="button-filter"
         onClick={ onClick }
+        disabled={ availableColumns.length === 0 }
       >
         Filtrar
       </button>

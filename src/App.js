@@ -4,6 +4,7 @@ import Table from './components/Table';
 import NameFilter from './components/NameFilter';
 import NumberFilter from './components/NumberFilter';
 import NumberFiltersView from './components/NumberFiltersView';
+import OrderColumn from './components/OrderColumn';
 import './App.css';
 
 function App() {
@@ -11,6 +12,7 @@ function App() {
     <Provider>
       <NameFilter />
       <NumberFilter />
+      <OrderColumn />
       <NumberFiltersView />
       <Table />
     </Provider>

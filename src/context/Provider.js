@@ -11,6 +11,10 @@ function Provider({ children }) {
     data: [],
     name: '',
     filterByNumericValues: [],
+    order: {
+      column: '',
+      sort: '',
+    },
   });
 
   useEffect(() => {
@@ -39,47 +43,40 @@ function Provider({ children }) {
     }));
   }
 
-  const numberFilter = (filters = null) => {
+  function verifyFilter(planets, { column, comparison, value }) {
+    switch (comparison) {
+    case 'maior que':
+      planets = planets.filter((item) => parseFloat(item[column]) > value);
+      break;
+    case 'menor que':
+      planets = planets.filter((item) => parseFloat(item[column]) < value);
+      break;
+    case 'igual a':
+      planets = planets.filter((item) => item[column] === value);
+      break;
+    default: planets = state.planets;
+    }
+
+    return planets;
+  }
+
+  function numberFilter(filters = null) {
     const { planets, filterByNumericValues } = state;
     let data = planets;
 
-    filterByNumericValues.forEach(({ column, comparison, value }) => {
-      switch (comparison) {
-      case 'maior que':
-        data = data.filter((item) => parseFloat(item[column]) > value);
-        break;
-      case 'menor que':
-        data = data.filter((item) => parseFloat(item[column]) < value);
-        break;
-      case 'igual a':
-        data = data.filter((item) => item[column] === value);
-        break;
-      default: data = planets;
-      }
+    filterByNumericValues.forEach((filter) => {
+      data = verifyFilter(data, filter);
     });
 
     if (filters) {
-      const { column, comparison, value } = filters;
-
-      switch (comparison) {
-      case 'maior que':
-        data = data.filter((item) => parseFloat(item[column]) > value);
-        break;
-      case 'menor que':
-        data = data.filter((item) => parseFloat(item[column]) < value);
-        break;
-      case 'igual a':
-        data = data.filter((item) => item[column] === value);
-        break;
-      default: data = planets;
-      }
+      data = verifyFilter(data, filters);
     }
 
     setState((prevState) => ({
       ...prevState,
       data,
     }));
-  };
+  }
 
   useEffect(() => {
     numberFilter();
@@ -127,6 +124,43 @@ function Provider({ children }) {
     }
   }
 
+  function orderList({ column, sort }, sortList) {
+    const { data } = state;
+    if (sort === 'ASC') {
+      sortList = data.sort((a, b) => a[column] - b[column]);
+    } else {
+      sortList = data.sort((a, b) => b[column] - a[column]);
+    }
+
+    return sortList;
+  }
+
+  useEffect(() => {
+    const { order } = state;
+    const sortList = [];
+
+    let list = [...orderList(order, sortList)];
+
+    if (order.column === 'population') {
+      const newInfo = list.filter((planet) => planet.population !== 'unknown');
+      const unkPopulation = list.filter((planet) => planet.population === 'unknown');
+
+      list = [...newInfo, ...unkPopulation];
+    }
+
+    setState((prevState) => ({
+      ...prevState,
+      data: list,
+    }));
+  }, [state.order]);
+
+  function sortColumns(order) {
+    setState((prevState) => ({
+      ...prevState,
+      order,
+    }));
+  }
+
   const contextVelue = {
     data: state.data,
     filterByName: {
@@ -136,6 +170,7 @@ function Provider({ children }) {
     changeName,
     performeNumberFilter,
     deleteFilter,
+    sortColumns,
   };
 
   return (

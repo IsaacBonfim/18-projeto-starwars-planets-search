@@ -1,5 +1,6 @@
 import React, { useContext, useState } from 'react';
 import Context from '../context/Context';
+import '../style/NumberFilter.css';
 
 function NumberFilter() {
   const [state, setState] = useState({
@@ -41,8 +42,8 @@ function NumberFilter() {
   }
 
   return (
-    <section>
-      <label htmlFor="column">
+    <section className="numberFilter-section">
+      <label htmlFor="column" className="numberFilter-label">
         Busque a:
         <select
           id="column"
@@ -62,7 +63,7 @@ function NumberFilter() {
         </select>
       </label>
 
-      <label htmlFor="comparison">
+      <label htmlFor="comparison" className="numberFilter-label">
         Que seja:
         <select
           id="comparison"
@@ -77,8 +78,8 @@ function NumberFilter() {
         </select>
       </label>
 
-      <label htmlFor="value">
-        o valor
+      <label htmlFor="value" className="numberFilter-label">
+        O valor
         <input
           type="number"
           name="value"

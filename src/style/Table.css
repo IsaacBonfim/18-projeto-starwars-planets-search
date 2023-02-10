@@ -1,0 +1,9 @@
+.table {
+  border-collapse: collapse;
+  box-shadow: 0 0 10px 2px lightgray;
+}
+
+.table th, .table td {
+  background-color: rgba(240, 240, 255, 0.8);
+  box-shadow: 0 0 10px 2px inset lightgray;
+}

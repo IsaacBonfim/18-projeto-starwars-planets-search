@@ -1,0 +1,36 @@
+.numberFiltersView-section {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 12px 0 20px;
+}
+
+.numberFiltersView-button-removeAll {
+  border-radius: 5px;
+  margin: 0 12px 12px;
+  padding: 8px 12px;
+}
+
+.numberFiltersView-filters-section {
+  align-items: center;
+  border-radius: 12px;
+  box-shadow: 0 0 10px 2px inset lightgray;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 50vw;
+}
+
+.numberFiltersView-filter {
+  margin: 12px;
+}
+
+.numberFiltersView-button-remove {
+  background-color: rgba(255, 0, 50, 0.8);
+  border: 2px solid lightgray;
+  border-radius: 5px;
+  color: white;
+  margin: 0 8px;
+  padding: 2px 4px;
+}

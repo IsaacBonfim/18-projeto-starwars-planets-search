@@ -1,10 +1,11 @@
 import React, { useContext } from 'react';
 import Context from '../context/Context';
+import '../style/Table.css';
 
 function Table() {
   const { data } = useContext(Context);
   return (
-    <table>
+    <table className="table">
       <thead>
         <tr>
           <th>Name</th>
@@ -34,7 +35,7 @@ function Table() {
             <td>{planet.terrain}</td>
             <td>{planet.surface_water}</td>
             <td>{planet.population}</td>
-            <td>{planet.films}</td>
+            <td>{planet.films.map((film, index) => <p key={ index }>{ film }</p>)}</td>
             <td>{planet.created}</td>
             <td>{planet.edited}</td>
             <td>{planet.url}</td>

@@ -1,5 +1,6 @@
 import React, { useContext, useState } from 'react';
 import Context from '../context/Context';
+import '../style/OrderColumn.css';
 
 function OrderColumn() {
   const [state, setState] = useState({
@@ -32,8 +33,8 @@ function OrderColumn() {
     'rotation_period', 'surface_water'];
 
   return (
-    <section>
-      <label htmlFor="column">
+    <section className="orderColumn-section">
+      <label htmlFor="column" className="orderColumn-select-label">
         Selecione uma Coluna
         <select
           id="column"
@@ -48,7 +49,7 @@ function OrderColumn() {
         </select>
       </label>
 
-      <div onChange={ onChange }>
+      <div className="orderColumn-radio-div" onChange={ onChange }>
         <label htmlFor="asc">
           <input
             id="asc"

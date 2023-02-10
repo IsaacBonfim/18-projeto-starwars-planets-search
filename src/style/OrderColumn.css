@@ -1,0 +1,34 @@
+.orderColumn-section {
+  align-items: center;
+  align-self: center;
+  border-radius: 12px;
+  box-shadow: 0 0 10px 2px inset lightgray;
+  display: flex;
+  height: 9vh;
+  justify-content: center;
+  margin: 10px 0;
+  width: 80vw;
+}
+
+.orderColumn-select-label {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  font-size: 16px;
+  height: 80%;
+  justify-content: center;
+  margin: 0 8px;
+  padding: 0 12px;
+}
+
+.orderColumn-radio-div {
+  align-items: flex-start;
+  border-radius: 12px;
+  box-shadow: 0 0 10px 2px inset lightgray;
+  display: flex;
+  flex-direction: column;
+  height: 80%;
+  justify-content: center;
+  margin: 0 8px;
+  padding: 0 12px;
+}

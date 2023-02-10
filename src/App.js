@@ -5,7 +5,7 @@ import NameFilter from './components/NameFilter';
 import NumberFilter from './components/NumberFilter';
 import NumberFiltersView from './components/NumberFiltersView';
 import OrderColumn from './components/OrderColumn';
-import './App.css';
+import './style/App.css';
 
 function App() {
   return (

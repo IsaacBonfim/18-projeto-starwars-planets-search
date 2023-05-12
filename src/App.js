@@ -1,15 +1,16 @@
 import React from 'react';
 import Provider from './context/Provider';
-import Table from './components/Table';
+import Title from './components/Title';
 import NameFilter from './components/NameFilter';
 import NumberFilter from './components/NumberFilter';
-import NumberFiltersView from './components/NumberFiltersView';
 import OrderColumn from './components/OrderColumn';
-import './style/App.css';
+import NumberFiltersView from './components/NumberFiltersView';
+import Table from './components/Table';
 
 function App() {
   return (
     <Provider>
+      <Title />
       <NameFilter />
       <NumberFilter />
       <OrderColumn />

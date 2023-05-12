@@ -1,3 +1,17 @@
+:root {
+
+  --black: black;
+
+  --canary: #ffe919ff;
+
+  --white: white;
+
+  --black-olive: #303632ff;
+
+  --field-drab: #615808ff;
+
+}
+
 * {
   box-sizing: border-box;
   font-family: Ubuntu , sans-serif;
@@ -5,11 +19,10 @@
   padding: 0;
 }
 
-/* #root {
-  display: flex;
-  flex-direction: column;
+#root {
+  background-color: var(--black);
   height: 100vh;
-} */
+}
 
 .App {
   text-align: center;

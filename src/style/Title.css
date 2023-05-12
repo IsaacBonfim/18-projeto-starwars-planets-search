@@ -1,0 +1,37 @@
+.title-container, .title-h1 {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+.title-container {
+  align-content: center;
+  padding: 2vh;
+  width: 100%;
+}
+
+.title-h1 {
+  flex-direction: column;
+}
+
+.main-title, .subtitle {
+  text-shadow: 0
+    0 2px var(--canary) , 0
+    0 3px var(--canary) , 0
+    0 4px var(--canary) , 0
+    0 5px var(--canary) , 1px
+    1px 6px var(--black) , 2px
+    2px 6px var(--black) , 3px
+    3px 6px var(--black) , 4px
+    4px 6px var(--black) , 5px
+    5px 7px var(--white);
+}
+
+.main-title {
+  font-family: Star Wars , sans-serif;
+  font-size: 10vh;
+}
+
+.subtitle {
+  font-size: 8vh;
+}

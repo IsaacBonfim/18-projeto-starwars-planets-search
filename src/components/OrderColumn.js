@@ -1,6 +1,5 @@
 import React, { useContext, useState } from 'react';
 import Context from '../context/Context';
-import '../style/OrderColumn.css';
 
 function OrderColumn() {
   const [state, setState] = useState({

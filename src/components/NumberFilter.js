@@ -1,6 +1,5 @@
 import React, { useContext, useState } from 'react';
 import Context from '../context/Context';
-import '../style/NumberFilter.css';
 
 function NumberFilter() {
   const [state, setState] = useState({

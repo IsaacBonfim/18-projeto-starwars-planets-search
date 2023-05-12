@@ -1,6 +1,5 @@
 import React, { useContext } from 'react';
 import Context from '../context/Context';
-import '../style/NameFilter.css';
 
 function NameFilter() {
   const { filterByName: { name }, changeName } = useContext(Context);

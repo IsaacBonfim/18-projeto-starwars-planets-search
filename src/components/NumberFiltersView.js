@@ -1,6 +1,5 @@
 import React, { useContext } from 'react';
 import Context from '../context/Context';
-import '../style/NumberFiltersView.css';
 
 function NumberFiltersView() {
   const { filterByNumericValues, deleteFilter } = useContext(Context);

@@ -6,6 +6,10 @@
 
 .title-container {
   align-content: center;
+  border-bottom: 3px solid var(--black-olive);
+  box-shadow: 0 0 6px 2px var(--black) , 0
+    0 18px 4px var(--black-olive);
+  margin-bottom: 3vh;
   padding: 2vh;
   width: 100%;
 }

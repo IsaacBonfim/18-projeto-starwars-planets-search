@@ -49,3 +49,15 @@
   margin: 1vh 0;
   padding: 4px;
 }
+
+.button {
+  background-color: var(--black);
+  border: 2px solid var(--black-olive);
+  border-radius: 6px;
+  box-shadow: 0 0 3px 2px var(--black);
+  color: var(--white);
+  font-family: Star Wars , sans-serif;
+  font-size: 1.5vh;
+  height: 4vh;
+  width: 9vw;
+}

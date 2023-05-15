@@ -16,7 +16,9 @@
 
 .numberFilter-label {
   background-color: var(--black);
-  box-shadow: 0 0 9px 5px inset var(--black-olive);
+  box-shadow: 0 0 7px 1px inset var(--black) , 0
+    0 9px 2px inset var(--black-olive) , 0
+    0 12px 4px inset var(--black-olive);
   color: var(--white);
   flex-direction: column;
   font-size: 18px;

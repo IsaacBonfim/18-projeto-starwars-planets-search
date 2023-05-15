@@ -47,6 +47,7 @@ function NumberFilter() {
         <select
           id="column"
           name="column"
+          className="select-filter"
           data-testid="column-filter"
           value={ state.column }
           onChange={ onChange }
@@ -67,6 +68,7 @@ function NumberFilter() {
         <select
           id="comparison"
           name="comparison"
+          className="select-filter"
           data-testid="comparison-filter"
           value={ state.comparison }
           onChange={ onChange }

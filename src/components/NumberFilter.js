@@ -93,6 +93,7 @@ function NumberFilter() {
 
       <button
         type="button"
+        className="button"
         data-testid="button-filter"
         onClick={ onClick }
         disabled={ availableColumns.length === 0 }

@@ -61,9 +61,17 @@
   border: 2px solid var(--black-olive);
   border-radius: 6px;
   box-shadow: 0 0 3px 2px var(--black);
-  color: var(--white);
+  color: var(--black-olive);
   font-family: Star Wars , sans-serif;
   font-size: 1.5vh;
   height: 4vh;
   width: 9vw;
+}
+
+.button:hover {
+  border: 2px solid transparent;
+  box-shadow: 0 0 3px 2px var(--white);
+  color: var(--black);
+  font-size: 2vh;
+  text-shadow: 0 0 3px var(--canary);
 }

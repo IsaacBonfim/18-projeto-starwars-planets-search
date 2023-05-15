@@ -50,6 +50,11 @@
   padding: 4px;
 }
 
+.select-filter:focus, .input-filter:focus {
+  border: 1px solid var(--canary);
+  outline: none;
+}
+
 .button {
   background-color: var(--black);
   border: 2px solid var(--black-olive);

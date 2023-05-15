@@ -84,6 +84,7 @@ function NumberFilter() {
         <input
           type="number"
           name="value"
+          className="input-filter"
           data-testid="value-filter"
           value={ state.value }
           onChange={ onChange }

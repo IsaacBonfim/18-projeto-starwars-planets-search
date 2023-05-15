@@ -1,24 +1,31 @@
-/* .numberFilter-section {
+.numberFilter-section, .numberFilter-label {
   align-items: center;
-  align-self: center;
   border-radius: 12px;
-  box-shadow: 0 0 10px 2px inset lightgray;
   display: flex;
-  height: 12vh;
   justify-content: center;
-  margin: 10px 0;
-  width: 90vw;
-} */
+}
 
-/* .numberFilter-label {
-  align-items: center;
-  border-radius: 12px;
-  box-shadow: 0 0 10px 2px inset lightgray;
-  display: flex;
+.numberFilter-section {
+  align-self: center;
+  background-color: var(--black-olive);
+  box-shadow: 0 0 9px 5px inset var(--black);
+  height: 13vh;
+  margin: 10px 5vw;
+  width: 90vw;
+}
+
+.numberFilter-label {
+  background-color: var(--black);
+  box-shadow: 0 0 9px 5px inset var(--black-olive);
+  color: var(--white);
   flex-direction: column;
   font-size: 18px;
   height: 80%;
-  justify-content: center;
   margin: 0 8px;
-  padding: 0 12px;
-} */
+  padding: 0 2.5vw;
+}
+
+.select-filter {
+  font-size: 2vh;
+  margin: 1vh 0;
+}

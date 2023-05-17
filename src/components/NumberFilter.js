@@ -41,8 +41,8 @@ function NumberFilter() {
   }
 
   return (
-    <section className="numberFilter-section">
-      <label htmlFor="column" className="numberFilter-label">
+    <section className="filter-section">
+      <label htmlFor="column" className="filter-label">
         Busque a:
         <select
           id="column"
@@ -63,7 +63,7 @@ function NumberFilter() {
         </select>
       </label>
 
-      <label htmlFor="comparison" className="numberFilter-label">
+      <label htmlFor="comparison" className="filter-label">
         Que seja:
         <select
           id="comparison"
@@ -79,7 +79,7 @@ function NumberFilter() {
         </select>
       </label>
 
-      <label htmlFor="value" className="numberFilter-label">
+      <label htmlFor="value" className="filter-label">
         O valor
         <input
           type="number"

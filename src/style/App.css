@@ -27,36 +27,45 @@
   height: 100vh;
 }
 
+.main-container {
+  background-image: linear-gradient(180deg, var(--black)
+  0.5%, var(--black-olive) 50%, var(--black) 99%);
+  display: flex;
+  flex-direction: column;
+  margin: 0 2.5vw;
+  padding: 2vh 0;
+  width: 95vw;
+}
+
 .container {
   align-items: center;
   align-self: center;
-  background-color: var(--black-olive);
-  border-radius: 12px;
+  background-image: linear-gradient(90deg, var(--black)
+  0.5%, var(--black-olive) 50%, var(--black) 99%);
   box-shadow: 0 0 9px 5px inset var(--black);
   display: flex;
   justify-content: center;
-  margin: 0 5vw;
-  width: 90vw;
+  width: 95vw;
 }
 
 .filter-section, .filter-label, .filter-container {
   align-items: center;
-  border-radius: 12px;
   display: flex;
   justify-content: center;
 }
 
 .filter-section {
   align-self: center;
-  background-color: var(--black-olive);
+  background-image: linear-gradient(90deg, var(--black)
+  0.5%, var(--black-olive) 50%, var(--black) 99%);
   box-shadow: 0 0 9px 5px inset var(--black);
   height: 13vh;
-  margin: 10px 5vw;
-  width: 90vw;
+  width: 95vw;
 }
 
 .filter-label, .filter-container {
   background-color: var(--black);
+  border-radius: 12px;
   box-shadow: 0 0 7px 1px inset var(--black) , 0
     0 9px 2px inset var(--black-olive) , 0
     0 12px 4px inset var(--black-olive);
@@ -73,7 +82,7 @@
 }
 
 .filter-container input {
-  margin: 1 vh 0;
+  margin: 0.8vh 0;
 }
 
 .select-filter, .input-filter {
@@ -108,8 +117,9 @@
 }
 
 .button:hover {
-  border: 2px solid transparent;
-  box-shadow: 0 0 3px 2px var(--white);
+  background-image: linear-gradient(90deg, var(--black)
+  0.5%, var(--black-olive) 50%, var(--black) 99%);
+  border: 2px solid var(--black);
   color: var(--black);
   font-size: 2.2vh;
   text-shadow: 0 0 2px var(--canary) , 0

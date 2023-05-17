@@ -33,7 +33,7 @@
   display: flex;
   flex-direction: column;
   margin: 0 2.5vw;
-  padding: 2vh 0;
+  padding: 2.5vh 0;
   width: 95vw;
 }
 
@@ -48,19 +48,33 @@
   width: 95vw;
 }
 
-.filter-section, .filter-label, .filter-container {
+.filter-section, .filter-view-section, .filter-label, .filter-container {
   align-items: center;
   display: flex;
   justify-content: center;
 }
 
-.filter-section {
+.filter-section, .filter-view-section {
   align-self: center;
   background-image: linear-gradient(90deg, var(--black)
   0.5%, var(--black-olive) 50%, var(--black) 99%);
   box-shadow: 0 0 9px 5px inset var(--black);
-  height: 13vh;
   width: 95vw;
+}
+
+.filter-section {
+  height: 13vh;
+}
+
+.filter-view-section {
+  flex-wrap: wrap;
+  height: fit-content;
+  min-height: 8vh;
+  padding: 1vh;
+}
+
+.filter-view-section button {
+  margin: 0 1.5vw;
 }
 
 .filter-label, .filter-container {

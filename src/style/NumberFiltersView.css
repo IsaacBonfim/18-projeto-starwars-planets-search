@@ -1,29 +1,20 @@
-/* .numberFiltersView-section {
-  align-items: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  margin: 12px 0 20px;
-}
-
-.numberFiltersView-button-removeAll {
-  border-radius: 5px;
-  margin: 0 12px 12px;
-  padding: 8px 12px;
-}
-
 .numberFiltersView-filters-section {
   align-items: center;
+  background-color: var(--black);
   border-radius: 12px;
-  box-shadow: 0 0 10px 2px inset lightgray;
+  box-shadow: 0 0 7px 1px inset var(--black) , 0
+    0 9px 2px inset var(--black-olive) , 0
+    0 12px 4px inset var(--black-olive);
+  color: var(--white);
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
+  height: 90%;
   justify-content: center;
   width: 50vw;
 }
 
 .numberFiltersView-filter {
-  margin: 12px;
+  margin: 0 0.5vw;
 }
 
 .numberFiltersView-button-remove {
@@ -33,4 +24,4 @@
   color: white;
   margin: 0 8px;
   padding: 2px 4px;
-} */
+}

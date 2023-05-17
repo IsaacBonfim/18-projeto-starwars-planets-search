@@ -73,6 +73,6 @@
   box-shadow: 0 0 3px 2px var(--white);
   color: var(--black);
   font-size: 2vh;
-  text-shadow: 0 0 3px var(--canary) , 0
-    0 4px var(--canary);
+  text-shadow: 0 0 2px var(--canary) , 0
+    0 3px var(--cana2ry);
 }

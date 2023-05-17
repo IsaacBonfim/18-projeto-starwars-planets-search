@@ -5,10 +5,10 @@ function NumberFiltersView() {
   const { filterByNumericValues, deleteFilter } = useContext(Context);
 
   return (
-    <section className="numberFiltersView-section">
+    <section className="filter-view-section">
       <button
         type="button"
-        className="numberFiltersView-button-removeAll"
+        className="button"
         data-testid="button-remove-filters"
         onClick={ () => deleteFilter() }
       >

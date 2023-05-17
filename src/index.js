@@ -4,7 +4,6 @@ import App from './App';
 import './style/App.css';
 import './style/NameFilter.css';
 import './style/NumberFiltersView.css';
-import './style/OrderColumn.css';
 import './style/Table.css';
 import './style/Title.css';
 

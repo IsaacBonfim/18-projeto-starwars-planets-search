@@ -32,12 +32,13 @@ function OrderColumn() {
     'rotation_period', 'surface_water'];
 
   return (
-    <section className="orderColumn-section">
-      <label htmlFor="column" className="orderColumn-select-label">
+    <section className="filter-section">
+      <label htmlFor="column" className="filter-label">
         Selecione uma Coluna
         <select
           id="column"
           name="column"
+          className="select-filter"
           data-testid="column-sort"
           value={ state.column }
           onChange={ onChange }
@@ -48,7 +49,7 @@ function OrderColumn() {
         </select>
       </label>
 
-      <div className="orderColumn-radio-div" onChange={ onChange }>
+      <div className="filter-container" onChange={ onChange }>
         <label htmlFor="asc">
           <input
             id="asc"
@@ -72,10 +73,11 @@ function OrderColumn() {
       </div>
       <button
         type="button"
+        className="button"
         data-testid="column-sort-button"
         onClick={ performSort }
       >
-        Ordenar
+        ordenar
       </button>
     </section>
   );

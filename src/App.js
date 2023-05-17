@@ -11,10 +11,12 @@ function App() {
   return (
     <Provider>
       <Title />
-      <NameFilter />
-      <NumberFilter />
-      <OrderColumn />
-      <NumberFiltersView />
+      <div className="main-container">
+        <NameFilter />
+        <NumberFilter />
+        <OrderColumn />
+        <NumberFiltersView />
+      </div>
       <Table />
     </Provider>
   );

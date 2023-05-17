@@ -45,9 +45,10 @@
   border-radius: 6px;
   box-shadow: 0 0 7px 2px var(--black-olive);
   color: var(--white);
-  font-size: 1.5vh;
+  font-size: 1.8vh;
   margin: 1vh 0;
   padding: 4px;
+  width: 8.5vw;
 }
 
 .select-filter:focus, .input-filter:focus {

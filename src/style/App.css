@@ -24,7 +24,8 @@
   background-color: var(--black);
   display: flex;
   flex-wrap: wrap;
-  height: 100vh;
+  height: fit-content;
+  min-height: 100vh;
 }
 
 .main-container {

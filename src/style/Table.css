@@ -1,10 +1,28 @@
 .table {
-  background-color: black;
+  background-image: linear-gradient(45deg, var(--black)
+  0.5%, var(--black-olive) 50%, var(--black) 99%);
   border-collapse: collapse;
-  box-shadow: 0 0 10px 2px lightgray;
+  color: var(--white);
+  overflow: scroll;
 }
 
 .table th, .table td {
-  background-color: rgba(240, 240, 255, 0.1);
-  box-shadow: 0 0 10px 2px inset lightgray;
+  background-color: transparent;
+  height: 8vh;
+  width: 15vw;
 }
+
+.table th {
+  background-image: linear-gradient(180deg, var(--black)
+  0.5%, var(--black-olive) 50%, var(--black) 99%);
+}
+
+/* .table tr:nth-child( even ) {
+  background-color: var(--black);
+  box-shadow: 0 0 12px 8px inset var(--black-olive);
+}
+
+.table tr:nth-child( odd ) {
+  background-color: var(--black-olive);
+  box-shadow: 0 0 12px 8px inset var(--black);
+} */

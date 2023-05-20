@@ -20,3 +20,7 @@
 .table tr {
   border: 2px solid var(--black);
 }
+
+.table td {
+  text-align: center;
+}

@@ -17,12 +17,6 @@
   0.5%, var(--black-olive) 50%, var(--black) 99%);
 }
 
-/* .table tr:nth-child( even ) {
-  background-color: var(--black);
-  box-shadow: 0 0 12px 8px inset var(--black-olive);
+.table tr {
+  border: 2px solid var(--black);
 }
-
-.table tr:nth-child( odd ) {
-  background-color: var(--black-olive);
-  box-shadow: 0 0 12px 8px inset var(--black);
-} */

@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 import Context from './Context';
-import fetchApi from '../services/fetchApi';
+import { fetchApi, fetchFilms } from '../services/fetchApi';
 
 const aux = -1;
 
@@ -17,7 +17,7 @@ function Provider({ children }) {
     },
   });
 
-  useEffect(() => {
+  const requestPlanets = () => {
     fetchApi().then((response) => {
       const data = response.sort((a, b) => {
         if (a.name > b.name) return 1;
@@ -32,6 +32,18 @@ function Provider({ children }) {
         planets: data,
       }));
     });
+  };
+
+  const resquestFilms = (url) => {
+    fetchFilms(url).then((response) => {
+      const data = response;
+      console.log(data);
+      return data;
+    })
+  }
+
+  useEffect(() => {
+    requestPlanets();
   }, []);
 
   function changeName({ target: { value } }) {

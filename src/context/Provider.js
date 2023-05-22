@@ -17,6 +17,14 @@ function Provider({ children }) {
     },
   });
 
+  const resquestFilms = async (url) => {
+    await fetchFilms(url).then((response) => {
+      const data = response;
+      console.log(data); //! 4º
+      return data;
+    })
+  }
+
   const requestPlanets = () => {
     fetchApi().then((response) => {
       const data = response.sort((a, b) => {
@@ -33,14 +41,6 @@ function Provider({ children }) {
       }));
     });
   };
-
-  const resquestFilms = (url) => {
-    fetchFilms(url).then((response) => {
-      const data = response;
-      console.log(data);
-      return data;
-    })
-  }
 
   useEffect(() => {
     requestPlanets();
@@ -173,20 +173,22 @@ function Provider({ children }) {
     }));
   }
 
-  const contextVelue = {
+  const contextValue = {
     data: state.data,
     filterByName: {
       name: state.name,
     },
     filterByNumericValues: state.filterByNumericValues,
+    setState,
     changeName,
+    resquestFilms,
     performeNumberFilter,
     deleteFilter,
     sortColumns,
   };
 
   return (
-    <Context.Provider value={ contextVelue }>
+    <Context.Provider value={ contextValue }>
       { children }
     </Context.Provider>
   );

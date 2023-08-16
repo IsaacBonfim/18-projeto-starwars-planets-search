@@ -17,16 +17,8 @@ function Provider({ children }) {
     },
   });
 
-  const resquestFilms = async (url) => {
-    await fetchFilms(url).then((response) => {
-      const data = response;
-      console.log(data); //! 4º
-      return data;
-    })
-  }
-
-  const requestPlanets = () => {
-    fetchApi().then((response) => {
+  const requestPlanets = async () => {
+    await fetchApi().then((response) => {
       const data = response.sort((a, b) => {
         if (a.name > b.name) return 1;
 
@@ -40,11 +32,34 @@ function Provider({ children }) {
         planets: data,
       }));
     });
-  };
+  }
 
+  const resquestFilms = async (url) => {
+    const film = await fetchFilms(url).then((response) => {
+      const data = response;
+      
+      return data;
+    })
+    return film;
+  }
+  
   useEffect(() => {
     requestPlanets();
   }, []);
+
+  useEffect(() => {
+    if (state.data.length > 0) {
+      const { data } = state
+
+      for (let i = 0 ; i < data.length ; i++) {
+        const films = data[i].films.map(async (film) => {
+          const title = await resquestFilms(film);
+          
+          return title;
+        });
+      }
+    }
+  }, [state.data, state.planets]);
 
   function changeName({ target: { value } }) {
     setState((prevState) => ({

@@ -11,12 +11,15 @@ function App() {
   return (
     <Provider>
       <Title />
-      <div className="main-container">
+      <details className="main-container">
+        <summary>
+          Refine aqui sua busca pelos planetas
+        </summary>
         <NameFilter />
         <NumberFilter />
         <OrderColumn />
         <NumberFiltersView />
-      </div>
+      </details>
       <Table />
     </Provider>
   );

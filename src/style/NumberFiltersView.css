@@ -8,13 +8,14 @@
   color: var(--white);
   display: flex;
   flex-wrap: wrap;
-  height: 90%;
+  height: fit-content;
   justify-content: center;
+  min-height: 4vh;
   width: 50vw;
 }
 
 .numberFiltersView-filter {
-  margin: 0 0.5vw;
+  margin: 0.3vh 0.5vw;
 }
 
 .numberFiltersView-button-remove {

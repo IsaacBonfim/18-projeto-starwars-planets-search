@@ -13,7 +13,7 @@ function App() {
       <Title />
       <details className="main-container">
         <summary>
-          Refine aqui sua busca pelos planetas
+          Busque em uma galáxia distante...
         </summary>
         <NameFilter />
         <NumberFilter />

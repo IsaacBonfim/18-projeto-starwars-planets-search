@@ -5,14 +5,12 @@ Neste projeto nos foi proposto a utilização do Context API e Hooks como soluç
 ## Telas do Projeto
 
 <div align="center">
-  <img height="220em" width="30%" src="https://user-images.githubusercontent.com/19375752/236010924-9592b05c-80ff-401f-a50c-8cd3e2996b8f.png" />&emsp;
-  <img height="220em" width="30%" src="https://user-images.githubusercontent.com/19375752/236011745-1a4b5f30-c86b-43f5-8f22-ff3da3c78e8b.png" />&emsp;
-  <img height="220em" width="30%" src="https://user-images.githubusercontent.com/19375752/236011965-386e965f-8834-4250-94c9-d844aac88fde.png" />
+  <img height="250em" width="45%" src="https://github.com/IsaacBonfim/18-projeto-starwars-planets-search/assets/19375752/91c06368-d887-4a11-ac39-7c4913bb76d8" />&emsp;
+  <img height="250em" width="45%" src="https://github.com/IsaacBonfim/18-projeto-starwars-planets-search/assets/19375752/07dec872-b3c5-4268-a39f-0eddc3aff8b9" />&emsp;
 </div>
 <div align="center">
-  <img height="220em" width="30%" src="https://user-images.githubusercontent.com/19375752/236012247-994437de-ae6b-4168-8ed7-53a1740ce8dd.png" />&emsp;
-  <img height="220em" width="30%" src="https://user-images.githubusercontent.com/19375752/236012687-4643d965-b873-4f5f-8e0d-679310590c94.png" />&emsp;
-  <img height="220em" width="30%" src="https://user-images.githubusercontent.com/19375752/236013296-6c4ee234-d864-4e1c-b7b4-6a017694bb10.png" />
+  <img height="250em" width="45%" src="https://github.com/IsaacBonfim/18-projeto-starwars-planets-search/assets/19375752/8705904b-0b77-4443-8773-0233ac1344c7" />&emsp;
+  <img height="250em" width="45%" src="https://github.com/IsaacBonfim/18-projeto-starwars-planets-search/assets/19375752/edaad99d-25d2-45a0-b2ea-e46ee9596d2a" />&emsp;
 </div>
 
 ## Instalação
